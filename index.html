@@ -33,9 +33,31 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <style>
+        html, body {
+          overflow-x: hidden !important;
+        }
+    </style>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+    <!-- Modal (Popup) -->
+  <div class="modal fade" id="linuxDownloadModal" tabindex="-1" aria-labelledby="popupLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="popupLabel">Choose a Linux Package</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <p>Select your preferred package format:</p>
+          <a href="WLANdrop-1.0.1-linux.deb" class="btn btn-outline-primary m-2" download>Download .deb</a>
+          <a href="WLANdrop-1.0.1-linux.tar.gz" class="btn btn-outline-secondary m-2" download>Download .tar.gz</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
     <div class="container-xxl bg-white p-0">
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -171,6 +193,14 @@
 <div class="container-xxl py-5">
     <div class="mx-2 py-5 px-lg-5">
         <div class="row g-5 align-items-center">
+            <div class="col-lg-4 d-flex justify-content-center justify-content-lg-end wow fadeInUp" data-wow-delay="0.3s">
+                <div class="owl-carousel screenshot-carousel">
+                    <img class="img-fluid" src="img/screenshot-1.png" alt="">
+                    <img class="img-fluid" src="img/screenshot-2.png" alt="">
+                    <img class="img-fluid" src="img/screenshot-3.png" alt="">
+                    <img class="img-fluid" src="img/screenshot-4.png" alt="">
+                </div>
+            </div>
             <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.1s">
                 <h5 class="text-primary-gradient fw-medium">How to Use</h5>
                 <h1 class="mb-4">User Friendly Interface and Very Easy to Use</h1>
@@ -193,12 +223,6 @@
                 </ul>
 
                 <a href="#" class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill mt-3">More Help</a>
-            </div>
-            <div class="col-lg-4 d-flex justify-content-center justify-content-lg-end wow fadeInUp" data-wow-delay="0.3s">
-                <div class="owl-carousel screenshot_lap-carousel">
-                    <img class="img-fluid" src="img/screenshot_lap-1.png" alt="App Screenshot 1">
-                    <img class="img-fluid" src="img/screenshot_lap-2.png" alt="App Screenshot 2">
-                </div>
             </div>
         </div>
     </div>
@@ -233,6 +257,15 @@
                                     <div class="ms-3">
                                         <p class="text-white mb-0">Available On</p>
                                         <h5 class="text-white mb-0">Play Store</h5>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
+                                <a href="WLANdrop-setup.exe" class="d-flex bg-primary-gradient rounded py-3 px-4" data-bs-toggle="modal" data-bs-target="#linuxDownloadModal">
+                                    <i class="fab fa-linux fa-3x text-white flex-shrink-0"></i>
+                                    <div class="ms-3">
+                                        <p class="text-white mb-0">Download For</p>
+                                        <h5 class="text-white mb-0">Linux</h5>
                                     </div>
                                 </a>
                             </div>
