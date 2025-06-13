@@ -73,16 +73,6 @@
         items: 1
     });
 
-    // Screenshot carousel
-    $(".screenshot_lap-carousel").owlCarousel({
-        autoplay: true,
-        smartSpeed: 1000,
-        loop: true,
-        dots: true,
-        items: 1
-    });
-
-
     // Testimonials carousel
     $(".testimonial-carousel").owlCarousel({
         autoplay: true,
@@ -109,8 +99,8 @@
     });
     $('#header').load('common/header.html');
     $('#footer').load('common/footer.html');
-    $(window).on('load', function () {
-        $('.screenshot_lap-carousel').trigger('refresh.owl.carousel');
-    });
+    // $(window).on('load', function () {
+    //     $('.screenshot-carousel').trigger('refresh.owl.carousel');
+    // });// use this when any abnormal behavior occurs with the screenshot and frame alignment
 })(jQuery);
 
