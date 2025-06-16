@@ -97,10 +97,8 @@
             }
         }
     });
-    $('#header').load('common/header.html');
-    $('#footer').load('common/footer.html');
-    // $(window).on('load', function () {
-    //     $('.screenshot-carousel').trigger('refresh.owl.carousel');
-    // });// use this when any abnormal behavior occurs with the screenshot and frame alignment
+    $(window).on('load', function () {
+        $('.screenshot-carousel').trigger('refresh.owl.carousel');
+    });// use this when any abnormal behavior occurs with the screenshot and frame alignment
 })(jQuery);
 
